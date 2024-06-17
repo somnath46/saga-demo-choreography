@@ -5,7 +5,9 @@ import java.util.UUID;
 
 import com.tnt.saga.commons.dto.PaymentRequestDto;
 import com.tnt.saga.commons.dto.PaymentStatus;
+import lombok.Data;
 
+@Data
 public class PaymentEvent implements Event {
 
 	private PaymentRequestDto paymentRequestDto;

@@ -1,0 +1,14 @@
+server:
+   port: 9595
+
+spring:
+   datasource:
+      url: ${DEMO_POSTGRES_URL:jdbc:postgresql://127.0.0.1:5332/prep?currentSchema=saga_demo}
+      username: ${DEMO_POSTGRES_USER:demo_dev}
+      password: ${DEMO_POSTGRES_PASSWORD:demo_dev}
+   jpa:
+      database: postgresql
+      database-platform: org.hibernate.dialect.PostgreSQLDialect
+      show-sql: true
+      generate-ddl: true   
+

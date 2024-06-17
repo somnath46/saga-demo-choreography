@@ -10,5 +10,16 @@ spring:
       database: postgresql
       database-platform: org.hibernate.dialect.PostgreSQLDialect
       show-sql: true
-      generate-ddl: true   
+      generate-ddl: true
+
+   cloud:
+      stream:
+         function:
+            definition : orderSupplier, paymentEventConsumer # same name as defined in the OrderPublisherConfig class
+         bindings:
+            orderSupplier-out-0:
+               destination: order-event # topic name where order event will publish
+            paymentEventConsumer-in-0 :
+               destination: payment-event
+
 

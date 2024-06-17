@@ -5,7 +5,9 @@ import java.util.UUID;
 
 import com.tnt.saga.commons.dto.OrderRequestDto;
 import com.tnt.saga.commons.dto.OrderStatus;
+import lombok.Data;
 
+@Data
 public class OrderEvent implements Event {
 
 	private OrderRequestDto orderRequestDto;
